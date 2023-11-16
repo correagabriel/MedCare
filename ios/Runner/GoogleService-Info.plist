@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCFKX-mW6ODESLvbeuwYDNuZtKONTa-P5E</string>
+	<key>GCM_SENDER_ID</key>
+	<string>223841487849</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.appplotzeTrabalho</string>
+	<key>PROJECT_ID</key>
+	<string>controladorremedios</string>
+	<key>STORAGE_BUCKET</key>
+	<string>controladorremedios.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:223841487849:ios:607ebadc435ab7a26f9978</string>
+</dict>
+</plist>

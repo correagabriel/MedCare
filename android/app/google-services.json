@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "223841487849",
+    "project_id": "controladorremedios",
+    "storage_bucket": "controladorremedios.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223841487849:android:66e5e7e795a32cc76f9978",
+        "android_client_info": {
+          "package_name": "com.example.appplotze_trabalho"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABg0beIQq9l5vNEp6_MxAx85ejA0p2sjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
