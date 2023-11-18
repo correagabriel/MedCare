@@ -1,4 +1,6 @@
+import 'package:appplotze_trabalho/view/controller/login_controller.dart';
 import 'package:flutter/material.dart';
+
 
 class MedicinesinBox extends StatefulWidget {
   const MedicinesinBox({super.key});
@@ -14,9 +16,36 @@ class _MedicinesinBoxState extends State<MedicinesinBox> {
       backgroundColor: Color(0XFF14233c),
 
       appBar: AppBar(
-        title: const Text("Caixa com os Remédios"),
         backgroundColor: Color(0XFF60468f),
         centerTitle: true,
+          title: Row(
+          children: [
+            Expanded(child: Text('Novo Remedio')),
+            FutureBuilder<String>(
+              future: LoginController().usuarioLogado(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.done) {
+                  return Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: TextButton.icon(
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        textStyle: TextStyle(fontSize: 12),
+                      ),
+                      onPressed: () {
+                        LoginController().logout();
+                        Navigator.pushReplacementNamed(context, 'login');
+                      },
+                      icon: Icon(Icons.exit_to_app, size: 14),
+                      label: Text(snapshot.data.toString()),
+                    ),
+                  );
+                }
+                return Text('');
+              },
+            ),
+          ],
+        ),
       ),
       body: Container(
         child: Column(

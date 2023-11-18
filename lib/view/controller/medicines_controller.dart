@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import '../model/medicines.dart';
-import '../view/messages/try_view.dart';
+import '../../model/medicines.dart';
+import '../messages/try_view.dart';
 import 'login_controller.dart';
 
 class MedicinesController {

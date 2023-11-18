@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:appplotze_trabalho/view/app/listmedicines_view.dart';
+import 'package:appplotze_trabalho/view/app/listamedicamentos/listmedicines_view.dart';
 import 'package:appplotze_trabalho/view/app/medicinesinbox_view.dart';
-import 'package:appplotze_trabalho/view/app/newpill_view.dart';
+import 'package:appplotze_trabalho/view/app/novosmedicamentos/newpill_view.dart';
 import 'package:flutter/material.dart';
 
 import '../app/index_view.dart';

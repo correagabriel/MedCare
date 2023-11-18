@@ -1,7 +1,9 @@
   // ignore_for_file: prefer_const_constructors
 
   import 'package:flutter/material.dart';
-  import 'package:appplotze_trabalho/controller/login_controller.dart';
+  import 'package:appplotze_trabalho/view/controller/login_controller.dart';
+  
+  import '../controller/login_controller.dart';
 
   class PrincipalView extends StatefulWidget {
     const PrincipalView({super.key});
@@ -30,7 +32,7 @@
           //width: double.infinity,
           //height: double.infinity,
           body: Padding(
-            padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: Form(
             key: _formKey,
             child: Column(
@@ -72,6 +74,7 @@
                           )
                           ),   
                       ),
+
                       SizedBox(
                         height: 15,
                       ),
@@ -80,15 +83,6 @@
                         controller: txtSenha,
                         obscureText: true,
                             maxLength: 8,
-                            validator: (String? value) {
-                            if (value == null) {
-                              return 'Por favor, insira sua senha';
-                            }
-                            if(value.length <8){
-                              return "Senha muita curta";
-                            }
-                            return null;
-                            },
                             decoration: InputDecoration(
                             fillColor: Colors.white,
                             filled: true,
@@ -122,15 +116,11 @@
                           ),
                         ),
                         onPressed: () {
-                          //
-                          // NAVEGAR PARA ROTA
-                          //
                           LoginController().login(
                             context,
                             txtEmail.text,
                             txtSenha.text,
                           );
-                          botaoPrincipalClicado();
                         },
                         child: Text(
                           'ENTRAR',
@@ -191,12 +181,5 @@
         ),
         ),
       );
-    }
-    botaoPrincipalClicado(){
-      if(_formKey.currentState!.validate()){
-        Navigator.pushNamed(context, 'navbar'); 
-      } else{
-        print("Form Invalido");
-      }
     }
 }

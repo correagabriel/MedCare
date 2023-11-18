@@ -1,15 +1,15 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:appplotze_trabalho/firebase_options.dart';
-import 'package:appplotze_trabalho/view/app/medicinesbox_view.dart';
+import 'package:appplotze_trabalho/view/app/caixamedicamentos/medicinesbox_view.dart';
+import 'package:appplotze_trabalho/view/app/listamedicamentos/medicinesinlist_view.dart';
 import 'package:appplotze_trabalho/view/app/medicinesinbox_view.dart';
-import 'package:appplotze_trabalho/view/app/medicinesinlist_view.dart';
 import 'package:appplotze_trabalho/view/apresentation/scren_apresentation.dart';
 import 'package:appplotze_trabalho/view/navegation/navbar_view.dart';
 import 'package:appplotze_trabalho/view/user/forgetpassword_view.dart';
-import 'package:appplotze_trabalho/view/app/listmedicines_view.dart';
-import 'package:appplotze_trabalho/view/app/newpill_forms_view.dart';
-import 'package:appplotze_trabalho/view/app/newpill_view.dart';
+import 'package:appplotze_trabalho/view/app/listamedicamentos/listmedicines_view.dart';
+import 'package:appplotze_trabalho/view/app/novosmedicamentos/newpill_forms_view.dart';
+import 'package:appplotze_trabalho/view/app/novosmedicamentos/newpill_view.dart';
 import 'package:appplotze_trabalho/view/user/newuser_view.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -38,32 +38,31 @@ Future<void> main() async {
         routes: {
           
           //apresentação
-          'apresentacao': (context) => Telaapresentacao(),
+          'apresentacao': (context) => const Telaapresentacao(),
 
           //tela de login
-          'principal': (context) => PrincipalView(),
+          'principal': (context) => const  PrincipalView(),
           //index 
-          'index': (context) => IndexView(),
+          'index': (context) => const  IndexView(),
           //esqueceu a senha
-          'forgetpassword': (context) => ForgetPassword(),
+          'forgetpassword': (context) => const  ForgetPassword(),
           //novo usuario
-          'newuser': (context) => NewUser(),
+          'newuser': (context) => const  NewUser(),
 
           //novo remedio
-          'newpill': (context) => NewPill(),
+          'newpill': (context) => const  NewPill(),
           //formulario de novo remedio
-          'formsnewpill': (context) => Formsnewpill(),
+          'formsnewpill': (context) => const  Formsnewpill(),
           //lista dos medicamentos
-          'listmedicines': (context) => Listmedicines(),
+          //'listmedicines': (context) => Listmedicines(),
           //medicamentos dentro da lista
-          'medicinesinlist': (context) => Medicinesinlist(),
+          //'medicinesinlist': (context) => Medicinesinlist(),
           //caixa de medicamentos
-          'medicinesboxes': (context) => MedicinesinBox(),
+          'medicinesboxes': (context) => const  MedicinesinBox(),
           //medicamentos dentro da caixa de medicamentos
-          'medicinesinboxes': (context) => MedicinesBox(),
 
           //navbar 
-          'navbar': (context) => NavegationBarr(),
+          'navbar': (context) => const  NavegationBarr(),
 
         },
       ),
