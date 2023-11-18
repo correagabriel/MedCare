@@ -1,4 +1,5 @@
 // ignore: unused_import
+/*
 import 'package:appplotze_trabalho/view/navegation/navbar_view.dart';
 import 'package:flutter/material.dart';
 import '../../model/medicines.dart';
@@ -73,3 +74,4 @@ class _MedicinesinlistState extends State<Medicinesinlist> {
     );
   }
 }
+*/

@@ -1,4 +1,4 @@
-
+/*
 import 'package:flutter/material.dart';
 import '../../model/medicines.dart';
 
@@ -68,3 +68,4 @@ class _ListmedicinesState extends State<Listmedicines> {
     );
   }
 }
+*/

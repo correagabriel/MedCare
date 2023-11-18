@@ -13,6 +13,7 @@
   class _PrincipalViewState extends State<PrincipalView> {
     var txtEmail = TextEditingController();
     var txtSenha = TextEditingController();
+    var txtEmailEsqueceuSenha = TextEditingController();
 
     @override
     void initState(){
@@ -145,10 +146,10 @@
                       ),
                       
                       TextButton(onPressed: () {
-                          //
-                          // NAVEGAR PARA ROTA
-                          //
-                          Navigator.pushNamed(context, 'forgetpassword');
+                          LoginController().esqueceuSenha(
+                            context,
+                            txtEmailEsqueceuSenha.text,
+                          );
                       }, 
                       child: Text(
                         'EQUECI A SENHA',

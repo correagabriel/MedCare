@@ -21,7 +21,7 @@ class _NavegationBarrState extends State<NavegationBarr> {
   int _index = 0;
   final screens = [
     NewPill(),
-    Listmedicines(),
+    //Listmedicines(),
     MedicinesinBox(),
     IndexView(),
   ];

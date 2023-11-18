@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:appplotze_trabalho/view/messages/try_view.dart';
 import 'package:appplotze_trabalho/controller/login_controller.dart';
+import '/controller/login_controller.dart';
 
 class NewUser extends StatefulWidget {
   const NewUser({super.key});
@@ -11,11 +12,11 @@ class NewUser extends StatefulWidget {
 }
 
 class _NewUserState extends State<NewUser> {
-    var txtNome = TextEditingController();
-    var txtEmail = TextEditingController();
-    var txtSenha = TextEditingController();
-    var txtCPF = TextEditingController();
-    var txtTelephone = TextEditingController();
+    var txtNome               = TextEditingController();
+    var txtEmail              = TextEditingController();
+    var txtSenha              = TextEditingController();
+    var txtCPF                = TextEditingController();
+    var txtTelephone          = TextEditingController();
     var txtEmergencyTelephone = TextEditingController();
 
     @override
@@ -97,15 +98,6 @@ class _NewUserState extends State<NewUser> {
                 TextFormField(
                   controller: txtCPF,
                   maxLength: 11,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Por favor, insira seu CPF.';
-                    }
-                    if(value.length <11){
-                      return "CPF Invalido";
-                    }
-                    return null;
-                    },
                     decoration: InputDecoration(
                     fillColor: Colors.white,
                             filled: true,
@@ -185,15 +177,6 @@ class _NewUserState extends State<NewUser> {
                 TextFormField(
                   controller: txtSenha,
                   maxLength: 8,
-                    validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Por favor, insira sua senha';
-                    }
-                    if(value.length <8){
-                      return "Senha Invalido";
-                    }
-                    return null;
-                    },
                     decoration: InputDecoration(
                       fillColor: Colors.white,
                       filled: true,
@@ -220,15 +203,6 @@ class _NewUserState extends State<NewUser> {
                 TextFormField(
                   controller: txtSenha,
                   maxLength: 11,
-                    validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Por favor, insira seu Senha.';
-                    }
-                    if(value.length <11){
-                      return "Senha Invalido";
-                    }
-                    return null;
-                    },
                     decoration: InputDecoration(
                       fillColor: Colors.white,
                       filled: true,
@@ -267,8 +241,10 @@ class _NewUserState extends State<NewUser> {
                       txtNome.text,
                       txtEmail.text,
                       txtSenha.text,
+                      txtCPF.text,
+                      txtTelephone.text,
+                      txtEmergencyTelephone.text,
                     );
-                    Navigator.pushNamed(context, 'principal');
                   },
                     child: Text(
                       'ENTRAR',

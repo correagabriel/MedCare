@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:appplotze_trabalho/view/messages/try_view.dart';
+import 'package:appplotze_trabalho/view/messages/try_view.dart';
 
 class LoginController {
   //
@@ -10,7 +11,7 @@ class LoginController {
   // Adiciona a conta de um novo usuário no serviço
   // Firebase Authentication
   //
-  criarConta(context, nome, email, senha) {
+  criarConta(context, nome, email, senha, cpf,telefone,telefoneemergencia) {
     FirebaseAuth.instance
         .createUserWithEmailAndPassword(
       email: email,
@@ -22,6 +23,9 @@ class LoginController {
         {
           'uid': resultado.user!.uid,
           'nome': nome,
+          'cpf': cpf,
+          'telefone': telefone,
+          'telefoneemergencia': telefoneemergencia,
         },
       );
 

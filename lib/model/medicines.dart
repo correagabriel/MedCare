@@ -1,21 +1,23 @@
-class tdsRemedios {
-  String nomeMedicamento;
-  String qtndMedicamento;
-  String dscMedicamento;
+class Medicamentos {
+  final String nomeMedicamento;
+  final String qtndMedicamento;
+  final String dscMedicamento;
 
-  tdsRemedios(this.nomeMedicamento, this.qtndMedicamento,this.dscMedicamento);
+  Medicamentos(this.nomeMedicamento, this.qtndMedicamento, this.dscMedicamento);
 
-  static List<tdsRemedios> gerartdsRemedios() {
-    List<tdsRemedios> lista = [];
-    for (int i = 1; i <= 1; i++) {
-      lista.add(
-        tdsRemedios(
-          'Oxalato de Escitalopram',
-          'Antes de toma-lo é necessário comer algo',
-          'Quantidade = 3 ',
-        ),
-      );
-    }
-    return lista;
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'nome': nomeMedicamento,
+      'quantidade': qtndMedicamento,
+      'descricao': dscMedicamento,
+    };
+  }
+
+  factory Medicamentos.fromJson(Map<String, dynamic> json) {
+    return Medicamentos(
+      json['nome'],
+      json['quantidade'],
+      json['descricao'],
+    );
   }
 }
