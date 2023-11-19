@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:appplotze_trabalho/view/controller/login_controller.dart';
+import 'package:appplotze_trabalho/controller/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../../controller/login_controller.dart';
+import '../../../controller/login_controller.dart';
 
 
 class NewPill extends StatefulWidget {
@@ -15,6 +15,7 @@ class NewPill extends StatefulWidget {
 }
 
 class _NewPillState extends State<NewPill> {
+
   
   @override
   Widget build(BuildContext context) {

@@ -1,13 +1,13 @@
 class Medicamentos {
-  final String nomeMedicamento;
+  final String nmMedicamento;
   final String qtndMedicamento;
   final String dscMedicamento;
 
-  Medicamentos(this.nomeMedicamento, this.qtndMedicamento, this.dscMedicamento);
+  Medicamentos(this.nmMedicamento, this.qtndMedicamento, this.dscMedicamento, [String? text]);
 
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
-      'nome': nomeMedicamento,
+      'nome': nmMedicamento,
       'quantidade': qtndMedicamento,
       'descricao': dscMedicamento,
     };

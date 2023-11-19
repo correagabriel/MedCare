@@ -1,4 +1,4 @@
-import 'package:appplotze_trabalho/view/controller/login_controller.dart';
+import 'package:appplotze_trabalho/controller/login_controller.dart';
 import 'package:flutter/material.dart';
 
 

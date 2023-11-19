@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 import 'package:appplotze_trabalho/view/messages/try_view.dart';
-import 'package:appplotze_trabalho/view/controller/login_controller.dart';
-import '../controller/login_controller.dart';
+import 'package:appplotze_trabalho/controller/login_controller.dart';
+import '../../controller/login_controller.dart';
 
 class NewUser extends StatefulWidget {
   const NewUser({super.key});

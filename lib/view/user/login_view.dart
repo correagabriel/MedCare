@@ -1,9 +1,9 @@
   // ignore_for_file: prefer_const_constructors
 
   import 'package:flutter/material.dart';
-  import 'package:appplotze_trabalho/view/controller/login_controller.dart';
+  import 'package:appplotze_trabalho/controller/login_controller.dart';
   
-  import '../controller/login_controller.dart';
+  import '../../controller/login_controller.dart';
 
   class PrincipalView extends StatefulWidget {
     const PrincipalView({super.key});
