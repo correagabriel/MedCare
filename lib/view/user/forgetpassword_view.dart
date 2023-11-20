@@ -1,3 +1,4 @@
+import 'package:appplotze_trabalho/controller/login_controller.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPassword extends StatefulWidget {
@@ -9,13 +10,16 @@ class ForgetPassword extends StatefulWidget {
 
 class _ForgetPasswordState extends State<ForgetPassword> {
   var txtEsqueceuPassword = TextEditingController();
-
+      
+    @override
+      void initState() {
+        super.initState();
+    }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0XFF14233c),
-    
       appBar: AppBar(
         title: const Text("Esqueceu a Senha"),
         centerTitle: true,
@@ -29,7 +33,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Text(
-              'Digite seu CPF e mandaremos um link ao seu telefone',
+              'Digite seu E-mail e mandaremos um link',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 28,
@@ -59,7 +63,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                     color:Color(0XFF60468f) ,width: 4
                   ),
                 ),
-                hintText: 'CPF',
+                hintText: 'E-MAIL',
               ),
             ),
           ),
@@ -70,7 +74,10 @@ class _ForgetPasswordState extends State<ForgetPassword> {
 
           OutlinedButton(
             onPressed: (){
-              Navigator.pushNamed(context, 'principal');
+              LoginController().esqueceuSenha(
+                context,
+                txtEsqueceuPassword.text,
+              );
             },
             style: OutlinedButton.styleFrom(
                 backgroundColor: Color(0XFFc26ef7),

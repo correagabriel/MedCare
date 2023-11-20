@@ -20,7 +20,7 @@ class _MedicinesinBoxState extends State<MedicinesinBox> {
         centerTitle: true,
           title: Row(
           children: [
-            Expanded(child: Text('Novo Remedio')),
+            Expanded(child: Text('Caixa de Medicamentos')),
             FutureBuilder<String>(
               future: LoginController().usuarioLogado(),
               builder: (context, snapshot) {

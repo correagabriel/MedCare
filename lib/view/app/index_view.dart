@@ -19,10 +19,35 @@ class _IndexViewState extends State<IndexView> {
       backgroundColor: Color(0XFF14233c),
       
       appBar: AppBar(
-        title: const Text("Sobre o Aplicativo"),
+                backgroundColor: Color(0XFF60468f),
         centerTitle: true,
-        backgroundColor: Color(0XFF60468f),
-        leading: const BackButton(
+          title: Row(
+          children: [
+            Expanded(child: Text('Sobre o App')),
+            FutureBuilder<String>(
+              future: LoginController().usuarioLogado(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.done) {
+                  return Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: TextButton.icon(
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        textStyle: TextStyle(fontSize: 12),
+                      ),
+                      onPressed: () {
+                        LoginController().logout();
+                        Navigator.pushReplacementNamed(context, 'login');
+                      },
+                      icon: Icon(Icons.exit_to_app, size: 14),
+                      label: Text(snapshot.data.toString()),
+                    ),
+                  );
+                }
+                return Text('');
+              },
+            ),
+          ],
         ),
       ),
       body: Column(

@@ -45,7 +45,7 @@ class _NavegationBarrState extends State<NavegationBarr> {
         // ignore: prefer_const_literals_to_create_immutables
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.group),
+            icon: Icon(Icons.healing),
             label: 'Novo',
             //label: 'Novos Remédios',
           ),

@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:appplotze_trabalho/firebase_options.dart';
-import 'package:appplotze_trabalho/view/app/listamedicamentos/medicinesinlist_view.dart';
+// ignore: unused_import
 import 'package:appplotze_trabalho/view/app/caixamedicamentos/medicinesinbox_view.dart';
 import 'package:appplotze_trabalho/view/apresentation/scren_apresentation.dart';
 import 'package:appplotze_trabalho/view/navegation/navbar_view.dart';
@@ -16,6 +16,7 @@ import 'package:flutter/material.dart';
 import 'view/app/index_view.dart';
 import 'view/user/login_view.dart';
 import 'firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 
 Future<void> main() async {
@@ -53,9 +54,7 @@ Future<void> main() async {
           //formulario de novo remedio
           'formsnewpill': (context) => const  Formsnewpill(),
           //lista dos medicamentos
-          'listmedicines': (context) => Listmedicines(),
-          //medicamentos dentro da lista
-          //'medicinesinlist': (context) => Medicinesinlist(),
+          'listmedicines': (context) => const Listmedicines(),
           //caixa de medicamentos
           'medicinesboxes': (context) => const  MedicinesinBox(),
           //medicamentos dentro da caixa de medicamentos

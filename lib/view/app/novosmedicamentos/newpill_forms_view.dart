@@ -164,12 +164,6 @@ class _FormsnewpillState extends State<Formsnewpill> {
                   txtdscdRemedio.text,
                   txtqntdRemedio.text,
                 );  
-                Navigator.push(
-                  context,
-                    MaterialPageRoute(
-                      builder: (context) => Listmedicines(Medicamentos: t),
-                    ),
-                );
               },
               child: Text('ADICIONAR Remedio'),
             ),
