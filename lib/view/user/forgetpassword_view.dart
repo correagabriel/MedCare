@@ -9,7 +9,7 @@ class ForgetPassword extends StatefulWidget {
 }
 
 class _ForgetPasswordState extends State<ForgetPassword> {
-  var txtEsqueceuPassword = TextEditingController();
+  final txtEsqueceuPassword = TextEditingController();
       
     @override
       void initState() {
@@ -97,6 +97,25 @@ class _ForgetPasswordState extends State<ForgetPassword> {
           )
         ],
       ),
+    );
+  }
+  Widget buildStyledButton(BuildContext context) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.green[800],
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+      ),
+      onPressed: () {
+        if (txtEsqueceuPassword.text.isEmpty) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Digite o email')),
+          );
+        } else {
+          LoginController().esqueceuSenha(context, txtEsqueceuPassword.text);
+          Navigator.pushNamed(context, 'inicio');
+        }
+      },
+      child: const Text('Enviar Email de Redefinição'),
     );
   }
 }
