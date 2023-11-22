@@ -51,6 +51,21 @@ class MedicinesController {
   listar() {
     return FirebaseFirestore.instance
         .collection('medicamentos')
-        .where('nome', isEqualTo: LoginController().idUsuario());
+        .where('id', isEqualTo: LoginController().idUsuario());
+  }
+
+   pesquisarPorNome(nome) {
+    var resultado = FirebaseFirestore.instance
+        .collection('medicamentos')
+        .where('id', isEqualTo: LoginController().idUsuario())
+        .where('titulo', isGreaterThanOrEqualTo: nome);
+
+    if (resultado == null) {
+      return FirebaseFirestore.instance
+          .collection('grupos')
+          .where('uid', isEqualTo: LoginController().idUsuario());
+    } else {
+      return resultado;
+    }
   }
 }

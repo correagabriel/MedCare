@@ -18,6 +18,7 @@ class _ListmedicinesState extends State<Listmedicines> {
   var txtnmMedicamento = TextEditingController();
   var txtqntdMedicamento = TextEditingController();
   var txtdscdMedicamento = TextEditingController();
+  var searchKey = '';
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +81,7 @@ class _ListmedicinesState extends State<Listmedicines> {
                       dynamic item = dados.docs[index].data();
                       return Card(
                         child: ListTile(
-                          leading: Icon(Icons.description),
+                          leading: Icon(Icons.medical_information),
                           title: Text(item['nome']),
                           subtitle: Text(item['quantidade']),
                           onTap: () {
@@ -104,12 +105,6 @@ class _ListmedicinesState extends State<Listmedicines> {
             }
           },
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          salvarRemedio(context);
-        },
-        child: Icon(Icons.add),
       ),
     );
   }

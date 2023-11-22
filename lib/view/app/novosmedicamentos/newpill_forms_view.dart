@@ -161,11 +161,14 @@ class _FormsnewpillState extends State<Formsnewpill> {
                 var t = Medicamentos(
                   LoginController().idUsuario(),
                   txtnmRemedio.text,
-                  txtdscdRemedio.text,
                   txtqntdRemedio.text,
-                );  
-              },
-              child: Text('ADICIONAR Remedio'),
+                  txtdscdRemedio.text,
+                );
+                txtdscdRemedio.clear();
+                txtqntdRemedio.clear();
+                txtdscdRemedio.clear();
+                MedicinesController().adicionar(context, t);
+              }, child: Text('ADICIONAR Remedio'),
             ),
           ],
         ),
