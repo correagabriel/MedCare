@@ -34,7 +34,7 @@ class _MedicinesinBoxState extends State<MedicinesinBox> {
                       ),
                       onPressed: () {
                         LoginController().logout();
-                        Navigator.pushReplacementNamed(context, 'login');
+                        Navigator.pushReplacementNamed(context, 'principal');
                       },
                       icon: Icon(Icons.exit_to_app, size: 14),
                       label: Text(snapshot.data.toString()),

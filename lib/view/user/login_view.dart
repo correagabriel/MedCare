@@ -136,10 +136,7 @@
                       ),
                       
                       TextButton(onPressed: () {
-                          LoginController().esqueceuSenha(
-                            context,
-                            txtEmailEsqueceuSenha.text,
-                          );
+                        Navigator.pushNamed(context, 'forgetpassword');
                       }, 
                       child: Text(
                         'EQUECI A SENHA',

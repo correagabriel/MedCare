@@ -176,6 +176,7 @@ class _NewUserState extends State<NewUser> {
 
                 TextFormField(
                   controller: txtSenha,
+                  obscureText: true,
                   maxLength: 8,
                     decoration: InputDecoration(
                       fillColor: Colors.white,
@@ -202,6 +203,7 @@ class _NewUserState extends State<NewUser> {
 
                 TextFormField(
                   controller: txtSenha,
+                  obscureText: true,
                   maxLength: 11,
                     decoration: InputDecoration(
                       fillColor: Colors.white,
